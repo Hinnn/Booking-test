@@ -132,7 +132,7 @@ let db = mongoose.connection;
         describe('POST /bookings/:customerID', function () {
             it('should return confirmation message and update datastore', function (done) {
                 let booking = {
-                    customerID: 0,
+                    "customerID": 0,
                     "paymenttype": "Direct",
                     "date": 20181201,
                     "amount": 1,
@@ -180,7 +180,7 @@ let db = mongoose.connection;
             });
         });
 
-describe('PUT/bookings/:customerID/amount',()=> {
+/*describe('PUT/bookings/:customerID/amount',()=> {
     describe('Booking Edited Successfully', function () {
         it('should return a message and the booking detail is edited', function (done) {
             let booking = {
