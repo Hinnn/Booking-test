@@ -183,7 +183,9 @@ I have connected it with mLab. There are three collections named bookingsdb, roo
 
 
 ## Extra features.
-        At first, I forgot to add some branches, then I created a new branching structure in another folder. But according to the teacher's request, I submitted the original git. Maybe I can put the later branching structure here.
+  At first, I forgot to add some branches, then I created a new branching structure in another folder. 
+  But according to the teacher's request, I submitted the original git. Maybe I can put the later branching structure here.
+        
         $
         git log
         commit 4a73464a6df98f0b4288f1796cf15ef770953be0 (HEAD -> master, delete-customers-test)
