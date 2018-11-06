@@ -4,7 +4,7 @@ Name: Yue Wang
 
 ## Overview.
 
-Based on the web app development assignment, I added these tests to the code to make sure that there is no mistake. It contains three test files: bookings-test, rooms-test and customers-test. I have connected it with mLab and also I use before and after functions to make sure the datas sotred in the database keep the data unchanged no matter what we do in each describe function.
+Based on the web app development assignment, I added these test code to make sure that there is no mistake. It contains three test files: bookings-test, rooms-test and customers-test. I have connected it with mLab and also I use before and after functions to make sure the datas sotred in the database keep the data unchanged no matter what we do in each describe function.
 
 ## API endpoints.
 
@@ -26,7 +26,36 @@ Based on the web app development assignment, I added these tests to the code to 
  + DELETE /customers/:customerID - Delete a customer by customerID.
 
 ## Data storage.
-I have connected it with mLab. There are three collections named bookingsdb, roomsdb and customersdb and also three schemas.
+I have connected it with mLab. There are three collections named bookingsdb, roomsdb and customersdb and also three schemas named bookings,customers and rooms.
+
+let BookingSchema = new mongoose.Schema({
+customerID: Number,
+paymenttype: String,
+date: Number,
+amount: Number,
+roomNum: String,
+price: Number
+
+},
+{ collection: 'bookingsdb' });
+module.exports = mongoose.model('Booking', BookingSchema);
+
+let RoomSchema = new mongoose.Schema({
+roomNum: String,
+price: Number,
+type : String
+},
+{ collection: 'roomsdb' });
+module.exports = mongoose.model('Room', RoomSchema);
+
+let CustomerSchema = new mongoose.Schema({
+customerID: Number,
+name: String,
+email : String,
+password: String
+},
+{ collection: 'customersdb' });
+module.exports = mongoose.model('Customer', CustomerSchema);
 
 ## Sample Test execution.
 
